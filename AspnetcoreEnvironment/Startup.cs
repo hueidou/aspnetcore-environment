@@ -41,6 +41,9 @@ namespace AspnetcoreEnvironment
                 app.UseHsts();
             }
 
+            var pathBase = Configuration["UsePathBase"];
+            app.UsePathBase(pathBase);
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
